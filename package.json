@@ -1,0 +1,36 @@
+{
+  "name": "@fi/flaky-common",
+  "version": "0.0.2",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "rimraf ./dist && tsc",
+    "pub": "git add -A && git commit -m \"Updates\" && npm version patch && npm run build && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flaky-infra/flaky-common.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flaky-infra/flaky-common/issues"
+  },
+  "homepage": "https://github.com/flaky-infra/flaky-common#readme",
+  "devDependencies": {
+    "@types/amqplib": "^0.8.2",
+    "@types/node": "^18.0.1",
+    "rimraf": "^3.0.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@typegoose/typegoose": "^9.10.1",
+    "amqplib": "^0.10.0"
+  }
+}
