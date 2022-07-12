@@ -1,5 +1,5 @@
 {
-  "name": "@fi/flaky-common",
+  "name": "flaky-common",
   "version": "0.0.1",
   "description": "",
   "main": "./dist/index.js",
@@ -9,15 +9,15 @@
   ],
   "scripts": {
     "build": "rimraf ./dist && tsc",
-    "pub": "git add -A && git commit -m \"Updates\" && npm version patch && npm run build && npm publish"
+    "pub": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/flaky-infra/flaky-common.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Salvatore Fasano",
+  "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/flaky-infra/flaky-common/issues"
   },
