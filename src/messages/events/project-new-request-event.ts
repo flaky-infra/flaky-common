@@ -5,5 +5,7 @@ export interface ProjectNewRequestEvent {
   data: {
     id: string;
     projectPath: string;
+    name: string;
+    version: number;
   };
 }
