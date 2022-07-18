@@ -13,6 +13,7 @@ abstract class Listener<T extends Event> {
   }
 
   async listen() {
+    await this.broker.createQueue(this.queueName);
     await this.broker.channel.bindQueue(
       this.queueName,
       this.broker.exchange,

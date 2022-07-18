@@ -41,7 +41,7 @@ export class BrokerWrapper {
     try {
       await this._channel.assertQueue(queueName, {exclusive: true});
     } catch (err) {
-      throw new Error((err as Error).message);
+      throw err;
     }
   }
 }
