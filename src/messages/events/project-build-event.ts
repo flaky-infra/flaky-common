@@ -10,5 +10,6 @@ export interface ProjectBuildEvent {
     commitId: string;
     testMethodName: string;
     configurationFolder: string;
+    buildTool: string;
   };
 }
