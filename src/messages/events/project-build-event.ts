@@ -1,7 +1,7 @@
 import {EventTypes} from './event-types';
 
-export interface ProjectNewRequestEvent {
-  eventType: EventTypes.ProjectNewRequest;
+export interface ProjectBuildEvent {
+  eventType: EventTypes.ProjectBuild;
   data: {
     id: string;
     projectPath: string;

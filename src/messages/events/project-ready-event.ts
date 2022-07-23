@@ -1,11 +1,11 @@
 import {EventTypes} from './event-types';
 
-export interface ProjectNewRequestEvent {
-  eventType: EventTypes.ProjectNewRequest;
+export interface ProjectReadyEvent {
+  eventType: EventTypes.ProjectReady;
   data: {
     id: string;
-    projectPath: string;
     name: string;
+    projectPath: string;
     version?: number;
     commitId: string;
     testMethodName: string;
