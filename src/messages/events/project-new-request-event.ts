@@ -10,5 +10,6 @@ export interface ProjectNewRequestEvent {
     commitId: string;
     testMethodName: string;
     configurationFolder: string;
+    moduleName: string;
   };
 }

@@ -10,5 +10,6 @@ export interface ProjectReadyEvent {
     commitId: string;
     testMethodName: string;
     configurationFolder: string;
+    moduleName: string;
   };
 }

@@ -11,5 +11,6 @@ export interface ProjectBuildEvent {
     testMethodName: string;
     configurationFolder: string;
     buildTool: string;
+    moduleName: string;
   };
 }
