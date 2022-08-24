@@ -1,26 +1,19 @@
+import {mongoose} from '@typegoose/typegoose';
+import {TestFailures} from '../../models/test-run';
 import {EventTypes} from './event-types';
-
-// export interface TestEndMessage {
-//   testFailures: TestFailures[];
-//   isLastConfig: boolean;
-// }
-
-export interface TestFailures {
-  testCases: TestCase[];
-}
-
-export interface TestCase {
-  classname: string;
-  displayName: string;
-  message: string;
-  name: string;
-  stacktrace: string;
-}
 
 export interface ProjectTestEndEvent {
   eventType: EventTypes.ProjectTestEnd;
   data: {
     testFailures: TestFailures[];
     isLastConfig: boolean;
+    testRunId: mongoose.Types.ObjectId;
+    projectId: mongoose.Types.ObjectId;
+    configFile: string;
+    scenarioConfiguration: string;
+    testMethodName: string;
+    executionLog: string;
+    numberOfScenarios: number;
+    duration: string;
   };
 }
