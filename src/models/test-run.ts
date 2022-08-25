@@ -26,6 +26,8 @@ export class TestFailures {
   public testCases?: TestExecutionResult[];
   @prop({required: true})
   public duration!: string;
+  @prop({required: true})
+  public isWarmupExecution!: string;
 }
 
 export const TestFailuresModel = getModelForClass(TestFailures);
