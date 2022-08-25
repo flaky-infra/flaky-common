@@ -56,6 +56,19 @@ export const ScenarioExecutionResultModel = getModelForClass(
   ScenarioExecutionResult
 );
 
+export class RootCause {
+  @prop()
+  public name!: string;
+  @prop()
+  public executionWithFailure!: number;
+  @prop()
+  public numberOfRuns!: number;
+  @prop()
+  public duration!: string;
+  @prop()
+  public failureRate!: number;
+}
+
 @modelOptions({options: {allowMixed: Severity.ALLOW}})
 export class TestRun extends TimeStamps {
   @prop({required: true})
@@ -64,8 +77,8 @@ export class TestRun extends TimeStamps {
   public configFolderPath!: string;
   @prop()
   public isFlaky?: boolean;
-  @prop({type: () => ScenarioExecutionResult})
-  public rootCause?: ScenarioExecutionResult;
+  @prop({type: () => RootCause})
+  public rootCause?: RootCause;
   @prop({default: []})
   public scenarioExecutionsResult?: mongoose.Types.ObjectId[];
 }
